@@ -1,62 +1,89 @@
 # YouTube Lead Generator
 
-A desktop application that captures screenshots of YouTube channel video pages and compiles them into a single PDF report.
+Generate PDF reports from YouTube channels with video thumbnails.
 
 ---
 
-## What This Tool Does
+## Quick Start Guide
 
-- Captures the "Videos" tab from any YouTube channel
-- Shows 100+ video thumbnails per channel
-- Compiles all screenshots into one PDF file
-- Supports any language (Arabic, Russian, Kurdish, etc.)
-- Processes up to 500 channels at once
+### Step 1: Install Python
 
----
+If you don't have Python installed:
 
-## Download
+1. Go to https://www.python.org/downloads/
+2. Click "Download Python" (get version 3.10 or newer)
+3. Run the installer
+4. IMPORTANT: Check the box that says "Add Python to PATH"
+5. Click "Install Now"
+6. Wait for installation to complete
 
-Go to the [Releases](../../releases/latest) page and download:
-- `YouTube-Lead-Generator.exe` - The main application
-- `install_browser.bat` - Browser setup script (run once)
+### Step 2: Install Browser Component
 
----
+After Python is installed:
 
-## First Time Setup
+1. Press Windows key + R
+2. Type `cmd` and press Enter
+3. In the black window, type this command and press Enter:
+   ```
+   pip install playwright
+   ```
+4. Wait for it to finish
+5. Then type this command and press Enter:
+   ```
+   playwright install chromium
+   ```
+6. Wait for download to complete (this downloads about 150 MB)
+7. Close the command window
 
-Before running the app for the first time, you need to install the browser component:
+### Step 3: Run the App
 
-### Option 1: Run the Setup Script
-Double-click `install_browser.bat` and wait for it to complete.
-
-### Option 2: Manual Installation
-Open Command Prompt and run:
-```
-pip install playwright
-playwright install chromium
-```
-
-This only needs to be done once.
+Double-click `YouTube-Lead-Generator.exe` to start the app.
 
 ---
 
 ## How to Use
 
-1. Open `YouTube-Lead-Generator.exe`
-2. Paste YouTube channel URLs or @handles into the text box
+1. Open the app
+2. Paste YouTube channel links or @handles in the text box
 3. Click "Generate PDF"
-4. Wait for processing (progress shown in app)
-5. PDF opens automatically when complete
+4. Wait for processing
+5. Your PDF will open automatically
 
-### Accepted Input Formats
+### What You Can Paste
 
-You can paste any of these formats:
-- @ChannelName
-- youtube.com/@ChannelName
-- https://www.youtube.com/c/ChannelName
-- Full channel URLs
+Any of these formats work:
+```
+@MrBeast
+@PewDiePie
+https://youtube.com/@ChannelName
+youtube.com/c/SomeChannel
+```
 
-You can paste multiple channels at once, one per line or mixed with other text.
+Paste as many channels as you want, one per line.
+
+---
+
+## Troubleshooting
+
+### "Browser not installed" or "PDF not created"
+
+You need to complete Step 2 above. Open Command Prompt and run:
+```
+pip install playwright
+playwright install chromium
+```
+
+### "pip is not recognized"
+
+Python is not installed correctly. Go back to Step 1 and make sure you check "Add Python to PATH" during installation.
+
+### App does not open
+
+Make sure you have Windows 10 or 11.
+
+### Stuck on processing
+
+Check your internet connection and try again with fewer channels.
 
 ---
 
@@ -64,45 +91,17 @@ You can paste multiple channels at once, one per line or mixed with other text.
 
 - Windows 10 or Windows 11
 - Internet connection
-- 200 MB free disk space
+- About 300 MB free disk space
 
 ---
 
-## Troubleshooting
+## Support
 
-**App won't start:**
-Make sure you ran `install_browser.bat` first.
-
-**PDF not created:**
-Check that your internet connection is working and the channel URLs are valid.
-
-**Screenshots are blank:**
-Some channels may have restrictions. Try different channels.
-
----
-
-## Support the Developer
-
-If you find this tool useful, consider supporting its development:
-
-- Buy Me A Coffee: https://buymeacoffee.com/YOURUSERNAME
-- PayPal: https://paypal.me/YOURUSERNAME
+Find this useful? Support the developer:
+https://buymeacoffee.com/YOURUSERNAME
 
 ---
 
 ## License
 
-This software is provided as a compiled executable. The source code is proprietary.
-
-- You may use this software for personal purposes
-- You may share the official download link
-- Modification and redistribution are not permitted
-- Reverse engineering is prohibited
-
-See the LICENSE file for full terms.
-
----
-
-## Report Issues
-
-Found a bug? Open an issue on the Issues page with a description of the problem.
+Free for personal use. Source code is not available. See LICENSE file.
